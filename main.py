@@ -1,4 +1,6 @@
 # test
+# test 23
+# test qwerty
 
 
 # Генерация QR кода
@@ -32,16 +34,8 @@ with open('file.txt', 'w') as file:
 import pywhatkit
 
 
-def send_message():
-    mobile = '+77066693596'
-    message = 'Ассаламагалейкум'
-    pywhatkit.sendwhatmsg(mobile, message, 14, 46)
-    print("Successfully Sent!")
-
-
-def main():
-    send_message()
-
-
-if __name__ == '__main__':
-    main()
+qrcode = segno.make_qr("testing pull request")
+qrcode.save(
+    "borderless_qrcode1.png",
+    scale=20
+)
